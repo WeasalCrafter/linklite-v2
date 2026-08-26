@@ -1,0 +1,3774 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "e87941bf-00f8-4e52-beb9-3777974497df")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:R_Small_US"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0.762 0.508 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "R_Small_US"
+				(at 0.762 -1.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor, small US symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "r resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_Small_US_1_1"
+				(polyline
+					(pts
+						(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 270)
+					(length 1.016)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.016)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "EasyEDA2KiCad:GWJTLMS3.GM-G4G8-XX57-1-60-R33"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "LED"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GW JTLMS3.GM-G4G8-XX57-1-60-R33"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "easyeda2kicad:LED-SMD_L3.5-W2.8-FD-2835_WHITE"
+				(at 0 -8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C34162565.pdf"
+				(at 0 -11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "ams(艾迈斯半导体)"
+				(at 0 -13.97 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "GW JTLMS3.GM-G4G8-XX57-1-60-R33"
+				(at 0 -16.51 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C34162565"
+				(at 0 -19.05 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GWJTLMS3.GM-G4G8-XX57-1-60-R33_0_1"
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0.51) (xy 1.27 -1.27) (xy -1.27 -3.05) (xy -1.27 0.51)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 2.29 2.29)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0.51) (xy 1.27 -3.05)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.29 0.25) (xy 3.3 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.05 3.05) (xy 2.03 2.54) (xy 2.54 2.03) (xy 3.05 3.05)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.06 2.03) (xy 3.05 1.52) (xy 3.56 1.02) (xy 4.06 2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin unspecified line
+					(at 5.08 -1.27 180)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 -1.27 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+3V3"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3V3\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND2"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND2"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND2_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND2_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(wire
+		(pts
+			(xy 33.02 33.02) (xy 33.02 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09066326-5d39-48ea-aba2-3edc337b3607")
+	)
+	(wire
+		(pts
+			(xy 43.18 74.93) (xy 46.99 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16a19a6b-c014-468e-b5c0-31b6b48f2291")
+	)
+	(wire
+		(pts
+			(xy 73.66 35.56) (xy 78.74 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "363218e9-ca2c-4e73-b3fe-37f6459803fe")
+	)
+	(wire
+		(pts
+			(xy 62.23 93.98) (xy 57.15 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c21261b-4661-45db-8b7c-a25b835c1ebe")
+	)
+	(wire
+		(pts
+			(xy 73.66 50.8) (xy 73.66 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c6faa09-7920-4af3-9f9d-2a920f3689a9")
+	)
+	(wire
+		(pts
+			(xy 62.23 55.88) (xy 57.15 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4bd922a5-24e8-4972-ad87-40be204c7392")
+	)
+	(wire
+		(pts
+			(xy 43.18 36.83) (xy 46.99 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e04c174-c09a-45fd-92f7-9208f4188c21")
+	)
+	(wire
+		(pts
+			(xy 33.02 93.98) (xy 38.1 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50dc6cb8-f6bb-4dc5-a0e7-a0cf9de7e259")
+	)
+	(wire
+		(pts
+			(xy 33.02 74.93) (xy 38.1 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cb9ba9b-59e2-4b92-ad04-53c9826b378f")
+	)
+	(wire
+		(pts
+			(xy 33.02 36.83) (xy 38.1 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6863ad6c-aa74-4de5-a72d-7181e4884ba9")
+	)
+	(wire
+		(pts
+			(xy 73.66 31.75) (xy 73.66 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "854baec3-ad09-49ac-bf8c-7f3f4bb11224")
+	)
+	(wire
+		(pts
+			(xy 83.82 54.61) (xy 87.63 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94fb5316-b38a-4c94-bce7-fb69302304a6")
+	)
+	(wire
+		(pts
+			(xy 33.02 90.17) (xy 33.02 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ada20fe7-0599-4082-ba2f-a7d019f51c9d")
+	)
+	(wire
+		(pts
+			(xy 73.66 69.85) (xy 73.66 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b22e31f2-10c5-46ba-aceb-93bf1d24f45c")
+	)
+	(wire
+		(pts
+			(xy 62.23 74.93) (xy 57.15 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c23908fe-aaec-4f88-beb1-dc000f7d5945")
+	)
+	(wire
+		(pts
+			(xy 43.18 55.88) (xy 46.99 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c73d33f1-c861-4165-88bf-36d5a79bc2f9")
+	)
+	(wire
+		(pts
+			(xy 33.02 71.12) (xy 33.02 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd176209-3956-4403-920f-936a00c268bc")
+	)
+	(wire
+		(pts
+			(xy 33.02 52.07) (xy 33.02 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d86a1c23-c35c-421a-9aa9-8507ec90222a")
+	)
+	(wire
+		(pts
+			(xy 73.66 73.66) (xy 78.74 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d937ef7a-2f68-4e31-92a2-8b442ce61179")
+	)
+	(wire
+		(pts
+			(xy 102.87 73.66) (xy 97.79 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de5f6db4-3044-41f8-bcfd-b4c84ae8f403")
+	)
+	(wire
+		(pts
+			(xy 102.87 54.61) (xy 97.79 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "deaf79a7-fef8-49b0-b352-a83955efbe9d")
+	)
+	(wire
+		(pts
+			(xy 83.82 35.56) (xy 87.63 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2995fd5-3147-4f3b-8b3c-6414e3821996")
+	)
+	(wire
+		(pts
+			(xy 73.66 54.61) (xy 78.74 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7b0b660-fcff-4494-866a-50faf18291f7")
+	)
+	(wire
+		(pts
+			(xy 33.02 55.88) (xy 38.1 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea2b9cd1-a8dd-4c3a-835f-7eed0c87b36b")
+	)
+	(wire
+		(pts
+			(xy 43.18 93.98) (xy 46.99 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef687049-6ec2-433c-a7ce-a852f7a6c896")
+	)
+	(wire
+		(pts
+			(xy 102.87 35.56) (xy 97.79 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f00c8203-2806-4bd0-928c-7faaf41f6018")
+	)
+	(wire
+		(pts
+			(xy 83.82 73.66) (xy 87.63 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2404e78-ca52-461e-8f4f-fa230aa1a58f")
+	)
+	(wire
+		(pts
+			(xy 62.23 36.83) (xy 57.15 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc452991-943c-4ecd-a451-e4db72ce8fc0")
+	)
+	(symbol
+		(lib_id "EasyEDA2KiCad:GWJTLMS3.GM-G4G8-XX57-1-60-R33")
+		(at 52.07 92.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "048b07fe-42e5-4072-9ad2-a0c39aae70e8")
+		(property "Reference" "LED8"
+			(at 51.816 86.106 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JTLMS3"
+			(at 52.07 88.392 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EasyEDA2KiCad:LED-SMD_L3.5-W2.8-FD-2835_WHITE"
+			(at 52.07 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C34162565.pdf"
+			(at 52.07 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "ams(艾迈斯半导体)"
+			(at 52.07 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GW JTLMS3.GM-G4G8-XX57-1-60-R33"
+			(at 52.07 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C34162565"
+			(at 52.07 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "495691eb-3e84-4e76-9f24-c465576f6987")
+		)
+		(pin "2"
+			(uuid "33ae240c-c740-4f91-902d-acec86c1a5c2")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "LED8")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "LED14")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "LED16")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "LED11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 40.64 36.83 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "16aa3332-2c3a-4a4c-a0a6-aa7aeadee665")
+		(property "Reference" "R1"
+			(at 40.64 30.48 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.6"
+			(at 40.64 33.02 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 40.64 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 40.64 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" " C325756 "
+			(at 40.64 36.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a9694a77-a4e2-4024-a5b2-f7b147b6f217")
+		)
+		(pin "2"
+			(uuid "be965121-d6fa-423b-b9ca-383d2acad2b1")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "R1")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "R24")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "R28")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 81.28 73.66 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "371258f4-7293-4a62-8315-80040169ae4c")
+		(property "Reference" "R34"
+			(at 81.28 67.31 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.6"
+			(at 81.28 69.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 81.28 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 81.28 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" " C325756 "
+			(at 81.28 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "39d7be73-f724-4741-ae21-a326cc15ec47")
+		)
+		(pin "2"
+			(uuid "b3b48022-e10c-4216-97d3-448d1ba57b68")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "R34")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "R42")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "R46")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "R38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 33.02 90.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "49211d1d-d982-4e1c-9e40-6195fafcdfdf")
+		(property "Reference" "#PWR044"
+			(at 33.02 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 33.02 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 33.02 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0ca8520c-255c-4744-9b85-d1ba9ce7fe3a")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR044")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR052")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR056")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 33.02 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "61044512-e741-41f1-87fc-bb36a70d3769")
+		(property "Reference" "#PWR042"
+			(at 33.02 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 33.02 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 33.02 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0aa4e616-df2f-4fd0-a7dd-34b502e2a5d5")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR042")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR051")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR055")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND2")
+		(at 62.23 74.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "612b8c8d-9900-4378-a45b-35b6c2bd447a")
+		(property "Reference" "#PWR045"
+			(at 62.23 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND2"
+			(at 62.23 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 62.23 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c0416bbc-3dd2-4f76-9ffb-49f05241752f")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR045")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR053")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR057")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR049")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND2")
+		(at 102.87 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "64dfccb9-b93f-4bda-a1b4-b99688f1a43a")
+		(property "Reference" "#PWR066"
+			(at 102.87 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND2"
+			(at 102.87 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 102.87 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "46363afc-088c-4689-88ea-1f44954543bb")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR066")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR082")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR090")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR074")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 40.64 93.98 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "66b3770f-d9ea-4dbf-8a9c-9d30ae1486e9")
+		(property "Reference" "R23"
+			(at 40.64 87.63 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.6"
+			(at 40.64 90.17 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 40.64 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 40.64 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" " C325756 "
+			(at 40.64 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fae5c3ce-f922-4d17-b5ca-f78309832be8")
+		)
+		(pin "2"
+			(uuid "266229ce-e961-4abe-92a9-3e8728fdc371")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "R23")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "R29")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "R31")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "R26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND2")
+		(at 62.23 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "66e117d4-b2bf-4c66-9dff-2d382652c0c2")
+		(property "Reference" "#PWR02"
+			(at 62.23 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND2"
+			(at 62.23 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 62.23 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5199969f-cec0-42ef-9fcb-f94910c7ac13")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR02")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR063")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR064")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND2")
+		(at 102.87 35.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6bad2118-7d9a-41c2-b136-9f8c3072c3db")
+		(property "Reference" "#PWR065"
+			(at 102.87 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND2"
+			(at 102.87 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 102.87 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "436d0256-b9c0-428e-9241-5b80f564cb6a")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR065")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR081")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR089")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR073")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 81.28 54.61 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "72d3faf0-1fe7-42df-81ef-f82160a04434")
+		(property "Reference" "R33"
+			(at 81.28 48.26 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.6"
+			(at 81.28 50.8 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 81.28 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 81.28 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" " C325756 "
+			(at 81.28 54.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ad58aecb-6b7f-4461-b173-f119f6314695")
+		)
+		(pin "2"
+			(uuid "05a0f216-b685-4d53-a34b-f880a3058973")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "R33")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "R41")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "R45")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "R37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "EasyEDA2KiCad:GWJTLMS3.GM-G4G8-XX57-1-60-R33")
+		(at 52.07 73.66 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8fc6331e-0f84-4931-88bc-0acd84e00ee1")
+		(property "Reference" "LED7"
+			(at 51.816 67.056 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JTLMS3"
+			(at 52.07 69.342 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EasyEDA2KiCad:LED-SMD_L3.5-W2.8-FD-2835_WHITE"
+			(at 52.07 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C34162565.pdf"
+			(at 52.07 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "ams(艾迈斯半导体)"
+			(at 52.07 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GW JTLMS3.GM-G4G8-XX57-1-60-R33"
+			(at 52.07 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C34162565"
+			(at 52.07 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7663dcfb-36ad-4dc1-81b8-3eca014c7201")
+		)
+		(pin "2"
+			(uuid "6743d187-7c6d-49a1-8ee3-56e160a176b3")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "LED7")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "LED12")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "LED15")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "LED10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 40.64 74.93 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a9a01c0-47c2-4357-bd03-35c493eb8ae3")
+		(property "Reference" "R22"
+			(at 40.64 68.58 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.6"
+			(at 40.64 71.12 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 40.64 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 40.64 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" " C325756 "
+			(at 40.64 74.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0cdc7321-b4d0-4dca-95fd-bc05d010250d")
+		)
+		(pin "2"
+			(uuid "8ae9c77e-aa39-4d72-a910-0536aed95900")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "R22")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "R27")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "R30")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "R25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 40.64 55.88 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9c2efead-b97e-4869-8ce5-86da2d934a96")
+		(property "Reference" "R6"
+			(at 40.64 49.53 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.6"
+			(at 40.64 52.07 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 40.64 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 40.64 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" " C325756 "
+			(at 40.64 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7f11addc-90ed-48a3-9c3c-f4fd0d9532e8")
+		)
+		(pin "2"
+			(uuid "ffe2daf1-9239-47d4-baa8-5d8281c29419")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "R6")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "R19")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "R21")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "EasyEDA2KiCad:GWJTLMS3.GM-G4G8-XX57-1-60-R33")
+		(at 92.71 53.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9cda2a12-54ea-4fda-a05f-00829b9fbe48")
+		(property "Reference" "LED18"
+			(at 92.456 46.736 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JTLMS3"
+			(at 92.71 49.022 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EasyEDA2KiCad:LED-SMD_L3.5-W2.8-FD-2835_WHITE"
+			(at 92.71 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C34162565.pdf"
+			(at 92.71 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 92.71 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "ams(艾迈斯半导体)"
+			(at 92.71 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GW JTLMS3.GM-G4G8-XX57-1-60-R33"
+			(at 92.71 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C34162565"
+			(at 92.71 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c03c4474-b9a3-483a-bcde-84922db99a9f")
+		)
+		(pin "2"
+			(uuid "b6937c35-9203-4773-8952-90d5eee58d81")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "LED18")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "LED26")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "LED30")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "LED22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 33.02 33.02 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a032733b-1033-4476-b061-75a5b297342a")
+		(property "Reference" "#PWR08"
+			(at 33.02 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 33.02 27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 33.02 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a58c577f-6d73-4317-8565-93ff5bc180b3")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR08")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR039")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR043")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 33.02 52.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a168d420-d716-4a3e-b3d1-473d9c1f4961")
+		(property "Reference" "#PWR016"
+			(at 33.02 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 33.02 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 33.02 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dbdfeeb8-d61b-4c6a-a002-f4c00710b44a")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR016")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR037")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR040")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND2")
+		(at 62.23 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bca9f79b-fe7a-40ef-ae71-e30ba2bfff1a")
+		(property "Reference" "#PWR022"
+			(at 62.23 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND2"
+			(at 62.23 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 62.23 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fe05613f-c260-407e-b49d-f60015661fc2")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR022")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR038")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR041")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 73.66 50.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c662da26-76d8-4ad9-9f3e-13055a73745e")
+		(property "Reference" "#PWR060"
+			(at 73.66 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 73.66 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.66 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 73.66 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "32bbdd97-ede6-4031-8702-c908e240abd5")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR060")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR078")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR086")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "EasyEDA2KiCad:GWJTLMS3.GM-G4G8-XX57-1-60-R33")
+		(at 92.71 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c7c7b2cc-d858-4d70-b04d-ecca36b3face")
+		(property "Reference" "LED19"
+			(at 92.456 65.786 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JTLMS3"
+			(at 92.71 68.072 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EasyEDA2KiCad:LED-SMD_L3.5-W2.8-FD-2835_WHITE"
+			(at 92.71 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C34162565.pdf"
+			(at 92.71 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 92.71 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "ams(艾迈斯半导体)"
+			(at 92.71 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GW JTLMS3.GM-G4G8-XX57-1-60-R33"
+			(at 92.71 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C34162565"
+			(at 92.71 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8366d292-efdf-4fb4-abae-b2178f05be7a")
+		)
+		(pin "2"
+			(uuid "adfeddb6-a91d-44f1-a319-783414d73417")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "LED19")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "LED27")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "LED31")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "LED23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 81.28 35.56 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d13392bb-92fa-4de6-9d54-9a581839bc2e")
+		(property "Reference" "R32"
+			(at 81.28 29.21 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.6"
+			(at 81.28 31.75 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 81.28 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 81.28 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" " C325756 "
+			(at 81.28 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e9608db9-1c73-4861-9f71-7fec4ad85faf")
+		)
+		(pin "2"
+			(uuid "f1b62c51-12a2-46f9-bee3-d8905b9595fa")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "R32")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "R40")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "R44")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "R36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "EasyEDA2KiCad:GWJTLMS3.GM-G4G8-XX57-1-60-R33")
+		(at 52.07 35.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d134785e-1943-4f11-9d65-eec62ac7aa4a")
+		(property "Reference" "LED1"
+			(at 51.816 28.956 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JTLMS3"
+			(at 52.07 31.242 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EasyEDA2KiCad:LED-SMD_L3.5-W2.8-FD-2835_WHITE"
+			(at 52.07 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C34162565.pdf"
+			(at 52.07 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "ams(艾迈斯半导体)"
+			(at 52.07 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GW JTLMS3.GM-G4G8-XX57-1-60-R33"
+			(at 52.07 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C34162565"
+			(at 52.07 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "30556531-5a41-4e2d-807b-a4d405e8f2a0")
+		)
+		(pin "2"
+			(uuid "fc497678-1efd-49ef-903f-721898b6fe5d")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "LED1")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "LED9")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "LED13")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "LED5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 73.66 31.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d4e84381-b115-49f2-8e25-23e539529624")
+		(property "Reference" "#PWR059"
+			(at 73.66 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 73.66 26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.66 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 73.66 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0af04b45-762e-4014-aba1-bc0f03eddaeb")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR059")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR077")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR085")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR069")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "EasyEDA2KiCad:GWJTLMS3.GM-G4G8-XX57-1-60-R33")
+		(at 92.71 34.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d74ad1ff-fe0f-419b-a1de-2a31ec78aae1")
+		(property "Reference" "LED17"
+			(at 92.456 27.686 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JTLMS3"
+			(at 92.71 29.972 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EasyEDA2KiCad:LED-SMD_L3.5-W2.8-FD-2835_WHITE"
+			(at 92.71 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C34162565.pdf"
+			(at 92.71 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 92.71 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "ams(艾迈斯半导体)"
+			(at 92.71 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GW JTLMS3.GM-G4G8-XX57-1-60-R33"
+			(at 92.71 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C34162565"
+			(at 92.71 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "149610dc-10af-44f2-9712-a1cc28e91524")
+		)
+		(pin "2"
+			(uuid "7f8d579b-5146-4db1-bbea-0b595b698c4b")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "LED17")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "LED25")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "LED29")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "LED21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND2")
+		(at 102.87 73.66 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d9435be4-88f9-4a78-8b3d-46fe76f821b0")
+		(property "Reference" "#PWR067"
+			(at 102.87 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND2"
+			(at 102.87 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 102.87 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7536586a-e651-490b-b4e3-4cb8c7ff8825")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR067")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR083")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR091")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR075")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "EasyEDA2KiCad:GWJTLMS3.GM-G4G8-XX57-1-60-R33")
+		(at 52.07 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e33db20b-eb34-41b5-9275-efeab862fe01")
+		(property "Reference" "LED2"
+			(at 51.816 48.006 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JTLMS3"
+			(at 52.07 50.292 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EasyEDA2KiCad:LED-SMD_L3.5-W2.8-FD-2835_WHITE"
+			(at 52.07 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C34162565.pdf"
+			(at 52.07 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "ams(艾迈斯半导体)"
+			(at 52.07 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GW JTLMS3.GM-G4G8-XX57-1-60-R33"
+			(at 52.07 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C34162565"
+			(at 52.07 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6cb72ab8-6bd2-46b0-9c57-305a7124d688")
+		)
+		(pin "2"
+			(uuid "c78844fc-26d8-4c4c-9b39-526c21b6c131")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "LED2")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "LED4")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "LED6")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "LED3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND2")
+		(at 62.23 93.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f4d2eeca-0179-401a-97d0-0a6c6b729244")
+		(property "Reference" "#PWR046"
+			(at 62.23 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND2"
+			(at 62.23 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 62.23 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "db16039b-cd93-4e3f-9ae6-6edb58a2a6b1")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR046")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR054")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR058")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 73.66 69.85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f7105c0a-be57-4e24-bf4c-b69aafc23fec")
+		(property "Reference" "#PWR061"
+			(at 73.66 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 73.66 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.66 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 73.66 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0a710f6c-bb4a-4da3-b85f-bb2cb1a978af")
+		)
+		(instances
+			(project "linklite_v2"
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/5509923c-00a5-44ed-8043-dee13cb5168a"
+					(reference "#PWR061")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/7b0ae82c-46f6-461d-a52d-123f0a7a787d"
+					(reference "#PWR079")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/88d9a2ae-44bb-4e03-bd04-10c604518235"
+					(reference "#PWR087")
+					(unit 1)
+				)
+				(path "/9c3ff25f-8cd3-4a9f-aa04-5db66a827316/d2083f50-4f08-4d27-960a-4b6700eba8f7"
+					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
