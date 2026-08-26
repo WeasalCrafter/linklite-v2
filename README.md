@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/weasalcrafter/linklite-v2">
-    <img src="images/logo.png" alt="Logo" width="400">
+    <img src="images/logo.png" alt="Logo" width="600">
   </a>
 
   <h3 align="center">LinkLite V2</h3>
@@ -27,6 +27,7 @@
       <a href="#files">File Structure</a>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#license">License</a></li>
   </ol>
 </details>
 
@@ -62,7 +63,7 @@ linklite-v2
 ├── temperature_logger
 ├── README.md
 ├── CLAUDE.md
-└── license.txt
+└── LICENSE.txt
 ```
 
 The arduino sketches for the ```linklite-bar```, ```linklite-controller```, and ```temperature_logger``` can be found under their respective folders, and my data collected can be found in the ```data``` folder along with the MATLAB script for plot generation.
@@ -86,4 +87,8 @@ These are the tools I used for this project for designing the schematic, PCB lay
 * [KiCad 10.0](https://www.kicad.org/)
 * [Digikey Tools](https://www.digikey.com/en/resources/online-conversion-calculators)
 * [MATLAB](https://www.mathworks.com/products/matlab.html)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.TXT) file for details.
 
