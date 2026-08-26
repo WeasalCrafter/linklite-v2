@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/weasalcrafter/linklite-v2">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="400">
   </a>
 
   <h3 align="center">LinkLite V2</h3>
