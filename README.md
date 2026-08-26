@@ -6,7 +6,7 @@
     <img src="images/logo.png" alt="Logo" width="600">
   </a>
 
-  <h3 align="center">LinkLite V2</h3>
+  <h3 align="center">LinkLite v2</h3>
 
   <p align="center">
     A modular ESP32-C6 based room light that syncs brightness via ESP-NOW
@@ -90,5 +90,5 @@ These are the tools I used for this project for designing the schematic, PCB lay
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.TXT) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
