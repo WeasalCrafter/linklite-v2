@@ -83,7 +83,7 @@ Website: [https://loganfick.com/projects/linklite-v2](https://loganfick.com/proj
 These are the tools I used for this project for designing the schematic, PCB layout, and programming.
 
 
-* [Claude Code](claude.com)
+* [Claude Code](https://www.claude.ai)
 * [KiCad 10.0](https://www.kicad.org/)
 * [Digikey Tools](https://www.digikey.com/en/resources/online-conversion-calculators)
 * [MATLAB](https://www.mathworks.com/products/matlab.html)
