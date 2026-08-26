@@ -11,9 +11,9 @@
   <p align="center">
     A modular ESP32-C6 based room light that syncs brightness via ESP-NOW
     <br />
-    <a href="#">See my post on my Website</a>
+    <a href="#">See my post on my Website</a><!--
     &middot;
-    <a href="#">Project video on Youtube</a>
+    <a href="#">Project video on Youtube</a>-->
   </p>
 </div>
 
