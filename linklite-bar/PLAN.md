@@ -66,10 +66,12 @@ Per `CLAUDE.md`:
    hardcode the same channel — ESP-NOW requires it, and an unassociated STA otherwise reuses
    whatever channel is cached in Wi-Fi NVS, which can silently drift between devices). Init
    ESP-NOW, register the broadcast peer (`FF:FF:FF:FF:FF:FF`) and the recv callback.
-4. Broadcast `MSG_QUERY`. Wait up to **500 ms** for a `MSG_STATE` reply.
-   - If one or more replies arrive: adopt the **first** valid reply's `level` as authoritative
-     (peers reflect live group consensus; NVS only reflects this bar's own last session, which is
-     stale if the group moved on while it was off). Overwrite the provisional value and persist it.
+4. Broadcast `MSG_QUERY`. Wait up to **500 ms** for `MSG_STATE` replies.
+   - Every reply received in the window goes through the same last-write-wins comparison as
+     steady-state heartbeats (§7.3): whichever `(level, stateVersion)` has the highest version
+     wins, including possibly this bar's own NVS-loaded state if no peer beats it. This replaced
+     an earlier "first reply wins" rule, which could stomp a correct persisted state with a
+     lagging peer's stale reply.
    - If none arrive: this bar *is* the group (first one up, or alone) — keep the NVS/default value.
 5. Enter main loop.
 
@@ -86,7 +88,9 @@ Cooperative, non-blocking — no `delay()` in `loop()`:
 - Rate-limited NVS persistence: only write after **2 s of quiescence** since the last change, not
   on every step. Flash write cycles are finite and a fast encoder spin can generate many deltas/sec.
 - Update the user LED per the status table in §8.
-- **(Open, see §7)** periodic drift-reconciliation heartbeat.
+- Broadcast a `MSG_STATE` heartbeat every `STATE_HEARTBEAT_MS` (~100 ms) — the primary bar-to-bar
+  sync mechanism, not just rare-drift reconciliation (§7.3); affordable because a converged bar's
+  `peerStateWins()` check on receipt is cheap when `(version, level)` already match.
 
 ## 7. Wire protocol (ESP-NOW)
 
@@ -101,13 +105,14 @@ typedef enum : uint8_t {
 } MsgType;
 
 typedef struct __attribute__((packed)) {
-  uint8_t  groupId;    // isolates separate physical installations sharing radio range; 0 = default
-  uint8_t  msgType;    // MsgType
-  uint8_t  senderType; // 0 = bar, 1 = controller
-  uint32_t seq;        // sender-local monotonic counter; debugging/ordering only, not for dedup
-  int8_t   delta;       // MSG_DELTA/MSG_TOGGLE payload, in percent points
-  uint8_t  level;       // MSG_STATE payload, absolute percent (0-100) — bootstrap/reconcile only
-} LinkLitePacket; // 9 bytes
+  uint8_t  groupId;      // isolates separate physical installations sharing radio range; 0 = default
+  uint8_t  msgType;      // MsgType
+  uint8_t  senderType;   // 0 = bar, 1 = controller
+  uint32_t seq;          // sender-local monotonic counter; debugging/ordering only, not for dedup
+  int8_t   delta;        // MSG_DELTA/MSG_TOGGLE payload, in percent points
+  uint8_t  level;        // MSG_STATE payload, absolute percent (0-100) — bootstrap/reconcile only
+  uint32_t stateVersion; // MSG_STATE payload: Lamport-style logical clock, see §7.3
+} LinkLitePacket; // 13 bytes
 ```
 
 **Important distinction:** `level` in `MSG_STATE` is *not* a "set to X" control command — CLAUDE.md
@@ -131,16 +136,51 @@ complexity (loop detection, TTLs, dedup) for no benefit at this scale. If a futu
 bars spread across a range no single controller can reach, revisit this — it's a deliberate scope
 cut, not an oversight.
 
-### 7.3 Drift correction — OPEN, not implemented in the skeleton
+### 7.3 Drift correction — last-write-wins via logical clock, implemented
 
 Missed broadcasts (radio interference, a bar briefly out of range) cause silent drift between bars
-since delta application isn't acknowledged. Proposed but **unimplemented** design: each bar
-broadcasts its own `MSG_STATE` as a heartbeat every ~30 s. A receiving bar that (a) differs from
-the received `level` by more than a small epsilon, and (b) has been quiescent — no delta
-applied/sent in the last few seconds — nudges one step toward the received value rather than
-snapping to it, so a bar mid-adjustment is never overridden. This needs bench validation with
-induced packet loss before it's trusted; the skeleton leaves the heartbeat and reconciliation as
-`// TODO(plan §7.3)`.
+since delta application isn't acknowledged — previously the only recovery was manually cranking
+every bar to a rail (0% or 100%) so the independent-clamping property (§11) forced convergence.
+
+**Design:** each bar keeps `brightnessVersion: uint32_t`, a Lamport-style logical clock (not
+wall-clock time) tied 1:1 to its own `percent` mutations:
+
+- **Local-origin mutation** (this bar applied a delta/toggle it received, or a local button press) →
+  `version = version + 1`. This bar just created a new fact.
+- **Remote-origin mutation** (adopting a peer's state) → `version = peerVersion`, assigned outright,
+  *not* incremented. This bar isn't creating a new fact, it's aligning to one that already exists.
+  Incrementing here too would make two bars that just converged each think they're now newest,
+  oscillating forever instead of settling — this distinction is the crux of the whole scheme.
+- Deliberately **not** persisted to NVS. Every reboot starts at `version = 0`, so a restarted bar
+  has no standing in `peerStateWins()` and must join the group's current state via the boot query
+  (§5 step 4) rather than asserting whatever it last knew — a bar that remembered its version
+  across reboots could out-rank a peer's genuinely current state after a power cycle (e.g. mid
+  firmware update) and stomp the group with a stale level. `percent` is still persisted, but only
+  as a display fallback for the solo/no-peers case, not as a claim on the group's state.
+
+Each bar broadcasts `MSG_STATE` (now carrying `level` **and** `stateVersion`) every
+`STATE_HEARTBEAT_MS` (15 s). On receiving *any* `MSG_STATE` — heartbeat or boot-query reply, same
+code path — a bar compares:
+
+- `peerVersion > localVersion` → adopt the peer's `(level, version)`.
+- `peerVersion == localVersion` but `level` differs → deterministic tie-break on MAC address
+  (larger wins), so the group can't oscillate. This only arises from a genuinely concurrent or
+  partitioned write (e.g. a bar toggled locally while out of range, whose increment from a stale
+  baseline happens to numerically match a peer's independently-advanced version) — under normal
+  operation, every mutation is broadcast and applied identically everywhere, so all bars advance
+  their version in lockstep and this branch essentially never fires.
+- `peerVersion < localVersion` → ignore; the peer is behind and will catch up on its next heartbeat.
+
+This **replaced** the originally-proposed "nudge one step toward the received value if quiescent"
+design. A bar only diverges when it's already missed updates — i.e. it's already visibly wrong —
+so snapping straight to the winning value is the more direct fix, and the logical-clock ordering
+already gives the "don't override a bar mid-adjustment" property the nudge/quiescence heuristic was
+reaching for: a bar applying its own deltas keeps incrementing its own version, so a stale peer
+heartbeat can't be `>` it and can't win.
+
+Bench-validated behavior to confirm: induce packet loss on one bar mid-session, confirm it
+re-converges within one heartbeat interval once back in range, and confirm no oscillation between
+two bars deliberately desynced to the same version with different levels.
 
 ## 8. User LED (GPIO22) status codes
 
@@ -173,8 +213,11 @@ toggle is implemented (it's simple and low-risk), everything else is `// TODO(pl
 
 ## 10. Persistence (NVS via `Preferences`)
 
-Namespace `"linklite"`, keys: `pct` (`uint8_t`, last brightness), `grp` (`uint8_t`, `groupId`,
-default 0). Write path is rate-limited per §6. No encryption/auth on the ESP-NOW link in v1 — flag
+Namespace `"linklite"`, keys: `pct` (`uint8_t`, last brightness — display fallback only, not a
+state claim) and `grp` (`uint8_t`, `groupId`, default 0). `brightnessVersion` is intentionally
+**not** persisted (see §7.3) so every boot re-joins the group via query instead of asserting a
+possibly-stale version. Write path is rate-limited per §6. No encryption/auth on the ESP-NOW link
+in v1 — flag
 per CLAUDE.md's "don't silently pick" spirit: this means anything in radio range can inject deltas.
 Acceptable for a single-room consumer light; revisit if the threat model changes (`esp_now` supports
 per-peer AES-CCM encryption if needed later).
@@ -214,7 +257,10 @@ per-peer AES-CCM encryption if needed later).
 
 ## 14. Explicit open items (don't silently resolve — confirm first)
 
-- §7.3 Drift-reconciliation heartbeat — design proposed, not implemented or bench-validated.
+- §7.3 Drift-reconciliation heartbeat — implemented (last-write-wins via logical clock); not yet
+  bench-validated against induced packet loss. `STATE_HEARTBEAT_MS` (~100 ms) chosen to make the
+  heartbeat the primary sync path rather than a rare-case backstop; `RX_QUEUE_LEN` (linklite-bar.ino)
+  was widened alongside it since the queue is shared with real controller commands.
 - §9 Button roles — button 1 short-press implemented as proposed; everything else pending.
 - §9 groupId assignment/pairing mechanism — no controller-side counterpart exists yet.
 - `STEP_SIZE_PERCENT` (2%/detent) and the 25% power-on default — reasonable starting guesses, tune
