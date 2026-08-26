@@ -12,7 +12,7 @@
 // ---- GPIO map (CLAUDE.md "Light bar" table) --------------------------------------------------
 #define PIN_BUTTON_1  20
 #define PIN_BUTTON_2  21
-#define PIN_USER_LED  22
+#define PIN_USER_LED  22 // 22 for c6 and 8 for c3
 #define PIN_MAIN_LEDS 23 // 23 for c6 and 0 for c3
 
 // ---- LEDC (PWM) config (PLAN.md §4) -----------------------------------------------------------
@@ -31,9 +31,9 @@
 
 // ---- Brightness domain (PLAN.md §2) -----------------------------------------------------------
 #define BRIGHTNESS_MIN_PCT   0
-#define BRIGHTNESS_MAX_PCT   100
-#define BRIGHTNESS_DEFAULT_PCT 25   // used only if NVS has no stored value and no peers respond
-#define STEP_SIZE_PERCENT    2      // must match linklite-controller's per-detent step
+#define BRIGHTNESS_MAX_PCT   80
+#define BRIGHTNESS_DEFAULT_PCT 30   // used only if NVS has no stored value and no peers respond
+#define STEP_SIZE_PERCENT    5      // must match linklite-controller's per-detent step
 
 // ---- Radio (PLAN.md §5 step 3, §10) -----------------------------------------------------------
 #define WIFI_CHANNEL     1          // must match linklite-controller; ESP-NOW requires same channel
@@ -46,12 +46,21 @@
 #define BUTTON_LONG_PRESS_MS    2000
 #define ACTIVITY_FLASH_MS       30
 
+// How often each bar broadcasts its own (level, stateVersion) as a last-write-wins heartbeat.
+// Deliberately fast: this is the primary bar-to-bar sync mechanism, not just a rare-drift
+// safety net, so lag is bounded to ~this interval instead of just "eventually." Frequency is
+// affordable because peerStateWins() (linklite-bar.ino) short-circuits to false the instant
+// (version, level) already match, so a converged bar pays only a cheap comparison per received
+// heartbeat, not a setBrightness()/LEDC/NVS touch — see RX_QUEUE_LEN in linklite-bar.ino for the
+// one real cost of raising this (shared RX buffer headroom against real controller commands).
+#define STATE_HEARTBEAT_MS      100
+
 // ---- Wire protocol (PLAN.md §7) ---------------------------------------------------------------
 enum MsgType : uint8_t {
 	MSG_DELTA  = 0x01,  // relative brightness step, from a controller
 	MSG_TOGGLE = 0x02,  // on/off toggle, from a controller
 	MSG_QUERY  = 0x03,  // "what's the current level?" — sent by a bar on boot
-	MSG_STATE  = 0x04,  // response to MSG_QUERY, or future heartbeat (PLAN.md §7.3)
+	MSG_STATE  = 0x04,  // response to MSG_QUERY, or periodic drift-reconciliation heartbeat
 };
 
 enum SenderType : uint8_t {
@@ -66,7 +75,11 @@ typedef struct __attribute__((packed)) {
 	uint32_t seq;
 	int8_t   delta;       // MSG_DELTA / MSG_TOGGLE payload, percent points
 	uint8_t  level;       // MSG_STATE payload, absolute percent 0-100
-} LinkLitePacket;         // 9 bytes, __packed__ so both sketches agree on wire layout
+	uint32_t stateVersion; // MSG_STATE payload: Lamport-style logical clock for last-write-wins
+	                       // reconciliation between bars (PLAN.md §7.3). NOT wall-clock time, and
+	                       // NOT the same thing as `seq` above (seq is per-sender and resets to 0
+	                       // every boot, so it can't be compared across bars or survive a reboot).
+} LinkLitePacket;         // 13 bytes, __packed__ so both sketches agree on wire layout
 
 // ---- Gamma LUT (PLAN.md §4) --------------------------------------------------------------------
 // duty = round(4095 * (percent/100)^2.2), percent = 0..100. Precomputed — do NOT call pow() at

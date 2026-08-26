@@ -1,0 +1,89 @@
+%% --- Load Data ---
+file = 'linklite_data_04.csv';
+data = readmatrix(file);                          % 20x9 numeric matrix
+hdr  = readcell(file, 'Range', '1:1');            % header row (cell array of strings)
+
+%% --- Pick columns to plot (by number) ---
+brightness = 1;        % (%)
+scaled_duty = 3;       % (%)
+measured_duty = 4;     % (%)
+
+total_current = 5;     % mA
+power_consumption = 6; % W
+voltage_drop = 7;      % V
+voltage_rail = 8;      % V
+led_current = 9;       % mA
+
+figure;
+
+subplot(2,2,1);
+plot(data(:,brightness), data(:,scaled_duty), '-c', 'LineWidth', 2.5, 'MarkerSize', 10, 'Color', 'r');
+title("Duty Cycle (%) vs. Brightness (%)", 'FontSize', 28);
+xlim([0 100]);
+grid on;
+
+subplot(2,2,2);
+plot(data(:,brightness), data(:,power_consumption), '-c', 'LineWidth', 2.5, 'MarkerSize', 10, 'Color', 'g');
+title("Power Consumption (W) vs. Brightness (%)", 'FontSize', 28)
+xlim([0 100]);
+grid on;
+
+subplot(2,2,3);
+plot(data(:,brightness), data(:,voltage_drop), '-o', 'LineWidth', 1.2, 'MarkerSize', 5);
+xlim([0 100]);
+ylim([0 3]);
+title("Forward Voltage Drop (V) vs. Bightness (%)", 'FontSize', 28);
+grid on;
+
+subplot(2,2,4);
+plot(data(:,voltage_drop), data(:,led_current), '-o', 'LineWidth', 1.2, 'MarkerSize', 5);
+xlim([2.6 2.9]);
+ylim([10 60]);
+title("LED Forward Current (mA) vs. Forward Voltage Drop (V)", 'FontSize', 28);
+grid on;
+
+for k = 1:4
+    subplot(2,2,k);
+    % ... your plot, title, labels ...
+    set(gca, 'FontSize', 20);
+end
+
+%% --- Load and Graph Experimental Data ---
+
+close all;
+clf;
+
+hold on
+
+temp_file = 'data_006.csv';
+temp_data = readmatrix(temp_file);                          
+plot(temp_data(:,1),temp_data(:,2));
+
+temp_file = 'data_010.csv';
+temp_data = readmatrix(temp_file);                          
+plot(temp_data(:,1),temp_data(:,2));
+
+temp_file = 'data_008.csv';
+temp_data = readmatrix(temp_file);                          
+plot(temp_data(:,1),temp_data(:,2));
+
+temp_file = 'data_009.csv';
+temp_data = readmatrix(temp_file);                          
+plot(temp_data(:,1),temp_data(:,2));
+
+hold off
+
+set(gca, 'FontSize', 20);
+xlim([0 1800]);
+xlabel("Time (s)", FontSize=28);
+ylabel("Temperature (C)", FontSize=28);
+title("Linklite LED Side PCB Temperature (C) vs. Time (s)", FontSize=35);
+
+legend( ...
+    'Single Linklite Trial 1', ...
+    'Single Linklite Trial 2', ...
+    'Double Linklite', ...
+    'Triple Linklite', ...
+    'fontsize',24, ...
+    'Location','Southeast' ...
+    );

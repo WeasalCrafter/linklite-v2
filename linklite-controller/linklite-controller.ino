@@ -65,6 +65,8 @@ void runAwakeSession() {
 	// silently breaks ESP-NOW TX until the whole device (and its Wi-Fi driver) is reset. Since a
 	// full reset is exactly what "fixes" this in the field, reassert the channel every wake
 	// rather than trusting it survived sleep.
+	Serial.println("Waking up!");
+
 	esp_wifi_set_channel(WIFI_CHANNEL, WIFI_SECOND_CHAN_NONE);
 
 	encoder->tick();
@@ -75,6 +77,7 @@ void runAwakeSession() {
 	uint32_t btnLastChangeMs = millis();
 
 	uint32_t lastActivityMs = millis();
+	uint32_t debugLedOffMs = 0; // 0 = LED currently off; nonzero = pending turn-off deadline
 
 	while (millis() - lastActivityMs < IDLE_TIMEOUT_MS) {
 		encoder->tick();
@@ -88,6 +91,16 @@ void runAwakeSession() {
 			if (percentDelta < -127) percentDelta = -127;
 			sendPacket(MSG_DELTA, (int8_t)percentDelta, 0);
 			lastActivityMs = millis();
+
+			if (DEBUG_ENCODER_LED) {
+				digitalWrite(PIN_DEBUG_LED, LOW); // active-low: on
+				debugLedOffMs = lastActivityMs + DEBUG_LED_FLASH_MS;
+			}
+		}
+
+		if (DEBUG_ENCODER_LED && debugLedOffMs != 0 && millis() >= debugLedOffMs) {
+			digitalWrite(PIN_DEBUG_LED, HIGH); // active-low: off
+			debugLedOffMs = 0;
 		}
 
 		bool raw = digitalRead(PIN_ENC_BTN);
@@ -106,6 +119,8 @@ void runAwakeSession() {
 
 		delay(5);
 	}
+
+	if (DEBUG_ENCODER_LED) digitalWrite(PIN_DEBUG_LED, HIGH); // off before sleeping, in case a flash was still pending
 }
 
 void setup() {
@@ -118,8 +133,16 @@ void setup() {
 
 	pinMode(PIN_ENC_BTN, INPUT_PULLUP);
 
+	if (DEBUG_ENCODER_LED) {
+		pinMode(PIN_DEBUG_LED, OUTPUT);
+		digitalWrite(PIN_DEBUG_LED, HIGH); // active-low: start off
+	}
+
 	WiFi.mode(WIFI_STA);
 	WiFi.disconnect();
+	WiFi.setTxPower(WIFI_POWER_8_5dBm); // ~8.5 dBm — reduced from the ~20 dBm default for close-range
+	                                     // bench testing; avoids overdriving a receiver inches away and
+	                                     // is a reasonable steady-state level for single-room operation
 	// Wi-Fi's own power-save state machine (modem sleep, DTIM-driven wake, etc.) is meant to
 	// coordinate with an AP connection we don't have here, and fighting it with our own explicit
 	// esp_light_sleep_start() calls is a known source of the radio not coming back cleanly after
@@ -135,6 +158,7 @@ void setup() {
 		// No user-facing indicator on this board (no status LED per CLAUDE.md's controller
 		// pinout) - nothing further to do here; retry logic is out of scope for this skeleton.
 	} else {
+		Serial.println("ESP-NOW init success!");
 		esp_now_register_send_cb(onEspNowSent);
 		esp_now_peer_info_t peer = {};
 		memcpy(peer.peer_addr, BROADCAST_MAC, 6);

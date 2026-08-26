@@ -13,12 +13,12 @@
 // Flagged in CLAUDE.md as "not yet fixed" — these are usable as light-sleep GPIO wake sources on
 // the C3 (any GPIO works for light sleep, unlike deep sleep's RTC-IO-only restriction), so they're
 // kept as documented until there's a reason to move them.
-#define PIN_ENC_A 2
-#define PIN_ENC_B 1
-#define PIN_ENC_BTN 0  //3
+#define PIN_ENC_A 20//2
+#define PIN_ENC_B 21 //1
+#define PIN_ENC_BTN 10  //3
 
 // ---- Brightness domain (must match linklite-bar/config.h) --------------------------------------
-#define STEP_SIZE_PERCENT 2  // percent points emitted per encoder detent
+#define STEP_SIZE_PERCENT 5  // percent points emitted per encoder detent
 
 // ---- Radio (must match linklite-bar/config.h) ---------------------------------------------------
 #define WIFI_CHANNEL 1
@@ -29,6 +29,16 @@
 // (LatchMode::FOUR3) rather than a time-based gate — see linklite-controller.ino.
 #define BUTTON_DEBOUNCE_MS 30
 #define IDLE_TIMEOUT_MS 250  // no activity for this long -> back to light sleep
+
+// ---- Debug -----------------------------------------------------------------------------------
+// Onboard LED on the ESP32-C3 SuperMini dev board (GPIO8, active-low: LOW = on). Not present on
+// the final controller PCB (CLAUDE.md's Controller table has no status LED), so this is bring-up
+// only — flashes whenever the encoder registers motion, to distinguish "wake/decode never
+// happened" from "it decoded fine but ESP-NOW comms to the bars is broken." Flip off before
+// building for the real board.
+static const bool DEBUG_ENCODER_LED = true;
+#define PIN_DEBUG_LED 8
+#define DEBUG_LED_FLASH_MS 40
 
 // ---- Wire protocol (must match linklite-bar/config.h) --------------------------------------------
 enum MsgType : uint8_t {
@@ -50,4 +60,6 @@ typedef struct __attribute__((packed)) {
 	uint32_t seq;
 	int8_t delta;
 	uint8_t level;
-} LinkLitePacket;  // 9 bytes
+	uint32_t stateVersion;  // bar-to-bar LWW reconciliation clock; the controller never sets this
+	                        // (packets are zero-initialized), just carries the field for layout parity.
+} LinkLitePacket;  // 13 bytes

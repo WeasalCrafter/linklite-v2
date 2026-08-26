@@ -1,0 +1,11 @@
+Measuring Temperature (C) of the LED Side of the PCB for Linklite #5
+
+006 - Single at 80% via USBC PD
+007 - Double at 80% via USBC PD -- removed for the probe not touching
+008 - Redo 007
+009 - Triple at 80% via USBC PD
+010 - Second trial of 006
+011 - Single at 60% via USBC PD
+012 - Second trial of 011       -- removed because probe moved
+013 - Redo 012
+014 - 90%, stopped prematurely because of blinking
