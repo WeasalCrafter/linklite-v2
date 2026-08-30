@@ -76,7 +76,7 @@ Logan Fick -  loganfickcontact@gmail.com
 
 Project Link: [https://github.com/weasalcrafter/linklite-v2](https://github.com/weasalcrafter/linklite-v2)
 
-Website: [https://loganfick.com/projects/linklite-v2](https://loganfick.com/projects/linklite-v2)
+Website: [https://loganfick.com/](https://loganfick.com/)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
