@@ -20,7 +20,7 @@
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
+<details opeb>
   <summary>Table of Contents</summary>
   <ol>
     <li>
